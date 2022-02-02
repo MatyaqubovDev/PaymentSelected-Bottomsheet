@@ -60,8 +60,8 @@ class MainActivity : AppCompatActivity() {
     private fun showCardPayment() {
         var cash_layout = findViewById<LinearLayout>(R.id.layout_cash)
         var card_layout = findViewById<LinearLayout>(R.id.layout_card)
-        checkBoxCash = findViewById<CheckBox>(R.id.checkbox_cash)
-        checkBoxCard = findViewById<CheckBox>(R.id.checkbox_card)
+        checkBoxCash = findViewById(R.id.checkbox_cash)
+        checkBoxCard = findViewById(R.id.checkbox_card)
 
         cash_layout.setOnClickListener {
             if (checkBoxCash.isChecked) {
