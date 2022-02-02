@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottomsheet_back"
+    android:orientation="vertical"
+    app:behavior_peekHeight="250dp"
+    app:behavior_hideable="true"
+    android:padding="8dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Select payment method"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layout_cash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_money" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_marginStart="12dp"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Cash"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_cash"
+            android:layout_width="0dp"
+            android:clickable="false"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_credit_card" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_marginStart="12dp"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Card"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_weight="0.2"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay"
+        android:layout_margin="30dp"/>
+
+</LinearLayout>
